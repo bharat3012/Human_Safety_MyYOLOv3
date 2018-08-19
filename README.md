@@ -8,5 +8,3 @@ This is a Pytorch implementation of state-of-art YOLOv3 object detection algorit
     4. Open the spyder and run detector.py and run the code for images or run video.py for videos/Webcam. output will be saved in the 'det' folder.
     
 Note: I have provided cfg, weights ,yolov3.h5,anchors and pallete file in the repostory .   
-    
-    
