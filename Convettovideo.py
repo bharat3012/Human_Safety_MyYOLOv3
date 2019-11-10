@@ -36,7 +36,7 @@ def convert_frames_to_video(pathIn,pathOut,fps):
     out.release()
  
 def main():
-    pathIn= './hand/'
+    pathIn= '/home/bharat/Desktop/YOLO_v3/Convert/Cardet/'
     pathOut = 'y3-person.avi'
     fps = 25.0
     convert_frames_to_video(pathIn, pathOut, fps)

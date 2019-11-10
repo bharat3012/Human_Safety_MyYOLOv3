@@ -73,12 +73,16 @@ model.eval()
 
 
 def write(x, results):
+ 
     c1 = tuple(x[1:3].int())
     c2 = tuple(x[3:5].int())
     img = results
     cls = int(x[-1])
     color = random.choice(colors)
-    label = "{0}".format(classes[cls])
+    label1 = "{0}".format(classes[cls])
+    label2 =float("{0:0.4f}".format((x[5])))
+    #label2 = torch.item(float((x[5])[cls]))
+    label = label1 + str(label2)
     cv2.rectangle(img, c1, c2,color, 1)
     t_size = cv2.getTextSize(label, cv2.FONT_HERSHEY_PLAIN, 1 , 1)[0]
     c2 = c1[0] + t_size[0] + 3, c1[1] + t_size[1] + 4
@@ -87,13 +91,14 @@ def write(x, results):
     return img
 
 
+
 #Detection phase
 
 videofile = args.videofile #or path to the video file. 
 
-cap = cv2.VideoCapture(videofile)  
+#cap = cv2.VideoCapture(vieofile)  
 
-#cap = cv2.VideoCapture(0)  for webcam
+cap = cv2.VideoCapture(0) # for webcam
 
 assert cap.isOpened(), 'Cannot capture source'
 

@@ -193,7 +193,7 @@ def write(x, results):
     cls = int(x[-1])
     color = random.choice(colors)
     label1 = "{0}".format(classes[cls])
-    label2 =float("{0:0.2f}".format((x[5])))
+    label2 =float("{0:0.4f}".format((x[5])))
     #label2 = torch.item(float((x[5])[cls]))
     label = label1 + str(label2)
     cv2.rectangle(img, c1, c2,color, 1)
