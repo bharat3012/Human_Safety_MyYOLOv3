@@ -9,7 +9,6 @@ Here's what a typical output of the detector will look like ;)
 This code is based on repo : https://github.com/ayooshkathuria/pytorch-yolo-v3
 
 ROTATION iNVARIANT EXXPLAINATION:
-
-  ![Detection Example](https://i.imgur.com/m2jDecision.pdf)
+![](images/Decision.pdf)
 Cheers
 
